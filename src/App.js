@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import Form from './components/Form';
+import MemoList from './components/MemoList';
 
 function App() {
+  // const [memo, setMemo] = useState('');
+  // const [memos, setMemos] = useState([]);
+
+  // const onAddMemo = e => {
+  //   setMemo(e.target.value);
+  // };
+
+  // const onSubmitMemo = e => {
+  //   e.preventDefault();
+  //   setMemos(prev => [...prev, memo]);
+  //   setMemo('');
+  // };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>메모 작성하기</h1>
+      <Form />
+      <MemoList />
     </div>
   );
 }
